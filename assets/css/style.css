@@ -45,12 +45,13 @@ body {
   font-family: 'DM Sans', sans-serif !important;
   max-width: 1000px;
   margin: auto;
+  padding: 0 12px;
 }
 
 /* ------------- Header -------------  */
 
 .main-header-wrap {
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 4rem;
 }
 
 .main-header-title {
