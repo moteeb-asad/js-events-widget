@@ -1,0 +1,156 @@
+export const collectionData = [
+  {
+    uuid: "evt-001",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+1",
+      time_start: "10:00",
+      time_end: "12:00",
+      description:
+        "Join us for a hands-on coding workshop focused on JavaScript fundamentals.",
+      sublocations: "Room A1",
+      date_start: "11-08-2025",
+      date_start_iso: "2025-08-11",
+      date_end: "11-08-2025",
+      date_end_iso: "2025-08-11",
+      allow_signeup: true,
+      name: "JavaScript Coding Workshop",
+      locations: "Tech Hub, Main Campus",
+      categories: "Workshops",
+      id: "workshop-001",
+      color: "#ffb3b3", // Light Red
+    },
+    page_item_url: "event/javascript-coding-workshop",
+  },
+  {
+    uuid: "evt-002",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+2",
+      time_start: "14:00",
+      time_end: "16:00",
+      description:
+        "Panel discussion with industry experts about the future of front-end development.",
+      sublocations: "Auditorium B",
+      date_start: "18-08-2025",
+      date_start_iso: "2025-08-18",
+      date_end: "18-08-2025",
+      date_end_iso: "2025-08-18",
+      allow_signeup: true,
+      name: "Front-End Tech Talk",
+      locations: "Innovation Center",
+      categories: "Talks",
+      id: "talk-002",
+      color: "#b3d1ff", // Light Blue
+    },
+    page_item_url: "event/front-end-tech-talk",
+  },
+  {
+    uuid: "evt-003",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+3",
+      time_start: "09:30",
+      time_end: "17:00",
+      description:
+        "A full-day networking and learning event for developers, designers, and tech leaders.",
+      sublocations: "Exhibit Hall C",
+      date_start: "25-08-2025",
+      date_start_iso: "2025-08-25",
+      date_end: "25-08-2025",
+      date_end_iso: "2025-08-25",
+      allow_signeup: false,
+      name: "TechConnect 2025",
+      locations: "Convention Center",
+      categories: "Conferences",
+      id: "conf-003",
+      color: "#b3ffb3", // Light Green
+    },
+    page_item_url: "event/techconnect-2025",
+  },
+  // September Event
+  {
+    uuid: "evt-004",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+4",
+      time_start: "11:00",
+      time_end: "13:00",
+      description: "September's big product launch event with demos and Q&A.",
+      sublocations: "Main Hall",
+      date_start: "05-09-2025",
+      date_start_iso: "2025-09-05",
+      date_end: "05-09-2025",
+      date_end_iso: "2025-09-05",
+      allow_signeup: true,
+      name: "Product Launch 2025",
+      locations: "HQ Auditorium",
+      categories: "Launches",
+      id: "launch-004",
+      color: "#ffe0b3", // Light Orange
+    },
+    page_item_url: "event/product-launch-2025",
+  },
+  // October Event
+  {
+    uuid: "evt-005",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+5",
+      time_start: "15:00",
+      time_end: "18:00",
+      description: "Annual October hackathon for all skill levels.",
+      sublocations: "Lab 2",
+      date_start: "12-10-2025",
+      date_start_iso: "2025-10-12",
+      date_end: "12-10-2025",
+      date_end_iso: "2025-10-12",
+      allow_signeup: true,
+      name: "October Hackathon",
+      locations: "Tech Lab",
+      categories: "Hackathons",
+      id: "hackathon-005",
+      color: "#f3b3ff", // Light Purple
+    },
+    page_item_url: "event/october-hackathon",
+  },
+  // November Event
+  {
+    uuid: "evt-006",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+6",
+      time_start: "08:00",
+      time_end: "10:00",
+      description: "November's breakfast networking for professionals.",
+      sublocations: "Cafeteria",
+      date_start: "03-11-2025",
+      date_start_iso: "2025-11-03",
+      date_end: "03-11-2025",
+      date_end_iso: "2025-11-03",
+      allow_signeup: false,
+      name: "Networking Breakfast",
+      locations: "Main Cafeteria",
+      categories: "Networking",
+      id: "networking-006",
+      color: "#b3fff6", // Light Cyan
+    },
+    page_item_url: "event/networking-breakfast",
+  },
+  // December Event
+  {
+    uuid: "evt-007",
+    data: {
+      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+7",
+      time_start: "19:00",
+      time_end: "22:00",
+      description: "End of year celebration and awards night.",
+      sublocations: "Banquet Hall",
+      date_start: "20-12-2025",
+      date_start_iso: "2025-12-20",
+      date_end: "20-12-2025",
+      date_end_iso: "2025-12-20",
+      allow_signeup: true,
+      name: "Year-End Gala",
+      locations: "Banquet Hall",
+      categories: "Celebrations",
+      id: "gala-007",
+      color: "#fffab3", // Light Yellow
+    },
+    page_item_url: "event/year-end-gala",
+  },
+];
