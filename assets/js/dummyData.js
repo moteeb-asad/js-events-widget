@@ -18,6 +18,7 @@ export const collectionData = [
       categories: "Workshops",
       id: "workshop-001",
       color: "#ffb3b3", // Light Red
+      price: 2000, // $20.00
     },
     page_item_url: "event/javascript-coding-workshop",
   },
@@ -40,6 +41,7 @@ export const collectionData = [
       categories: "Talks",
       id: "talk-002",
       color: "#b3d1ff", // Light Blue
+      price: 1500, // $15.00
     },
     page_item_url: "event/front-end-tech-talk",
   },
@@ -62,6 +64,7 @@ export const collectionData = [
       categories: "Conferences",
       id: "conf-003",
       color: "#b3ffb3", // Light Green
+      price: 5000, // $50.00
     },
     page_item_url: "event/techconnect-2025",
   },
@@ -84,6 +87,7 @@ export const collectionData = [
       categories: "Launches",
       id: "launch-004",
       color: "#ffe0b3", // Light Orange
+      price: 3000, // $30.00
     },
     page_item_url: "event/product-launch-2025",
   },
@@ -106,6 +110,7 @@ export const collectionData = [
       categories: "Hackathons",
       id: "hackathon-005",
       color: "#f3b3ff", // Light Purple
+      price: 1000, // $10.00
     },
     page_item_url: "event/october-hackathon",
   },
@@ -128,6 +133,7 @@ export const collectionData = [
       categories: "Networking",
       id: "networking-006",
       color: "#b3fff6", // Light Cyan
+      price: 800, // $8.00
     },
     page_item_url: "event/networking-breakfast",
   },
@@ -150,6 +156,7 @@ export const collectionData = [
       categories: "Celebrations",
       id: "gala-007",
       color: "#fffab3", // Light Yellow
+      price: 2500, // $25.00
     },
     page_item_url: "event/year-end-gala",
   },
