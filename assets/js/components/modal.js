@@ -6,7 +6,13 @@ export function initEventModal(currentMonthName) {
   const modalContainer = document.querySelector(
     ".lx-agenda-event-modal-container"
   );
+  console.log("modalContainer", modalContainer);
+  if (!modalContainer) return; // Exit if modal is not found
   const closeBtn = modalContainer.querySelector(".event-modal-close-btn");
+  if (!closeBtn) {
+    console.error("Event modal close button not found!");
+    return;
+  }
 
   // Function to format date
   function formatDate(dateStr) {
@@ -61,6 +67,19 @@ export function initEventModal(currentMonthName) {
     } else {
       descText.classList.remove("scroll");
     }
+
+    // Remove any existing price label if present
+    const bookTicketWrap = modalContainer.querySelector(".book-ticket-wrap");
+    let priceLabel = bookTicketWrap.querySelector(".event-price-label");
+    if (!priceLabel) {
+      priceLabel = document.createElement("span");
+      priceLabel.className = "event-price-label";
+      bookTicketWrap.appendChild(priceLabel);
+    }
+    const price = event.data.price
+      ? (event.data.price / 100).toFixed(2)
+      : "0.00";
+    priceLabel.textContent = `$${price}`;
 
     // Show modal
     modalContainer.style.display = "flex";

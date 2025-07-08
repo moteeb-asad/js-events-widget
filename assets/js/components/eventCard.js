@@ -134,6 +134,35 @@ export function createEventCard(event) {
   detailsWrap.appendChild(locationWrap);
   detailsWrap.appendChild(mainDesc);
 
+  // Add book ticket button and price
+  const bookTicketWrap = document.createElement("div");
+  bookTicketWrap.className = "book-ticket-btn-price-wrap";
+
+  const bookTicketBtn = document.createElement("button");
+  bookTicketBtn.setAttribute("data-priceid", event.data.stripePriceId);
+  bookTicketBtn.setAttribute("data-eventname", event.data.name);
+  bookTicketBtn.className = "book-ticket-btn";
+  bookTicketBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+      <path d="M8 1v4"/>
+      <path d="M16 1v4"/>
+    </svg>
+    Book Ticket
+  `;
+
+  // Price element
+  const priceSpan = document.createElement("span");
+  priceSpan.className = "event-price-label";
+  const price = event.data.price ? (event.data.price / 100).toFixed(2) : "0.00";
+  priceSpan.textContent = `$${price}`;
+
+  bookTicketWrap.appendChild(bookTicketBtn);
+  bookTicketWrap.appendChild(priceSpan);
+
+  // Add to details wrap
+  detailsWrap.appendChild(bookTicketWrap);
+
   infoWrap.appendChild(titleWrap);
   infoWrap.appendChild(detailsWrap);
 

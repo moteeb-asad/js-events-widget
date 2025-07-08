@@ -140,7 +140,7 @@ export function generateEventsMonth(
   }
 
   // Initialize event modal for this month
-  initEventModal(currentMonth.month);
+  // initEventModal(currentMonth.month); // Removed to avoid multiple initializations
 }
 
 // Initialize month navigation functionality

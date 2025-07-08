@@ -12,22 +12,27 @@ import {
 } from "./components/calendar.js";
 import { initEventModal } from "./components/modal.js";
 import { initViewToggle } from "./components/viewToggle.js";
+import { initBookTicket } from "./components/bookEvent.js";
 
-// Global variable to store grouped events
-let groupedEvents;
+export function initializeApp() {
+  // Global variable to store grouped events
+  let groupedEvents;
 
-// Use imported collection data instead of API call
-groupedEvents = groupEventsByMonth(collectionData);
+  // Use imported collection data instead of API call
+  groupedEvents = groupEventsByMonth(collectionData);
 
-// Make groupedEvents available globally for modal access
-window.groupedEvents = groupedEvents;
+  // Make groupedEvents available globally for modal access
+  window.groupedEvents = groupedEvents;
 
-// Initialize all components
-generateEventAccordion(groupedEvents);
-appendDropdownCategories(groupedEvents);
-generateEventsMonth(groupedEvents);
+  // Initialize all components
+  generateEventAccordion(groupedEvents);
+  appendDropdownCategories(groupedEvents);
+  generateEventsMonth(groupedEvents);
 
-// Initialize all event listeners and functionality
-initFilterDropdown();
-initFilterEventListeners();
-initViewToggle();
+  // Initialize all event listeners and functionality
+  initFilterDropdown();
+  initFilterEventListeners();
+  initViewToggle();
+  initBookTicket();
+  initEventModal(); // Only call once after modal is loaded
+}

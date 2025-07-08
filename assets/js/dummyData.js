@@ -19,6 +19,7 @@ export const collectionData = [
       id: "workshop-001",
       color: "#ffb3b3", // Light Red
       price: 2000, // $20.00
+      stripePriceId: "price_1RiDNNK6xLgk1t9fiU672FU2",
     },
     page_item_url: "event/javascript-coding-workshop",
   },
@@ -42,6 +43,7 @@ export const collectionData = [
       id: "talk-002",
       color: "#b3d1ff", // Light Blue
       price: 1500, // $15.00
+      stripePriceId: "price_1RiDWdK6xLgk1t9fxTdqzUUB",
     },
     page_item_url: "event/front-end-tech-talk",
   },
@@ -65,55 +67,11 @@ export const collectionData = [
       id: "conf-003",
       color: "#b3ffb3", // Light Green
       price: 5000, // $50.00
+      stripePriceId: "price_1RiDYtK6xLgk1t9fGbNKmDtr",
     },
     page_item_url: "event/techconnect-2025",
   },
-  // September Event
-  {
-    uuid: "evt-004",
-    data: {
-      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+4",
-      time_start: "11:00",
-      time_end: "13:00",
-      description: "September's big product launch event with demos and Q&A.",
-      sublocations: "Main Hall",
-      date_start: "05-09-2025",
-      date_start_iso: "2025-09-05",
-      date_end: "05-09-2025",
-      date_end_iso: "2025-09-05",
-      allow_signeup: true,
-      name: "Product Launch 2025",
-      locations: "HQ Auditorium",
-      categories: "Launches",
-      id: "launch-004",
-      color: "#ffe0b3", // Light Orange
-      price: 3000, // $30.00
-    },
-    page_item_url: "event/product-launch-2025",
-  },
-  // October Event
-  {
-    uuid: "evt-005",
-    data: {
-      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+5",
-      time_start: "15:00",
-      time_end: "18:00",
-      description: "Annual October hackathon for all skill levels.",
-      sublocations: "Lab 2",
-      date_start: "12-10-2025",
-      date_start_iso: "2025-10-12",
-      date_end: "12-10-2025",
-      date_end_iso: "2025-10-12",
-      allow_signeup: true,
-      name: "October Hackathon",
-      locations: "Tech Lab",
-      categories: "Hackathons",
-      id: "hackathon-005",
-      color: "#f3b3ff", // Light Purple
-      price: 1000, // $10.00
-    },
-    page_item_url: "event/october-hackathon",
-  },
+
   // November Event
   {
     uuid: "evt-006",
@@ -134,30 +92,8 @@ export const collectionData = [
       id: "networking-006",
       color: "#b3fff6", // Light Cyan
       price: 800, // $8.00
+      stripePriceId: "price_REPLACE_WITH_REAL_ID_6",
     },
     page_item_url: "event/networking-breakfast",
-  },
-  // December Event
-  {
-    uuid: "evt-007",
-    data: {
-      logo_url: "https://via.placeholder.com/100x100.png?text=Logo+7",
-      time_start: "19:00",
-      time_end: "22:00",
-      description: "End of year celebration and awards night.",
-      sublocations: "Banquet Hall",
-      date_start: "20-12-2025",
-      date_start_iso: "2025-12-20",
-      date_end: "20-12-2025",
-      date_end_iso: "2025-12-20",
-      allow_signeup: true,
-      name: "Year-End Gala",
-      locations: "Banquet Hall",
-      categories: "Celebrations",
-      id: "gala-007",
-      color: "#fffab3", // Light Yellow
-      price: 2500, // $25.00
-    },
-    page_item_url: "event/year-end-gala",
   },
 ];
