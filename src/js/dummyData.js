@@ -74,7 +74,7 @@ export const collectionData = [
 
   // November Event
   {
-    uuid: "evt-006",
+    uuid: "evt-004",
     data: {
       logo_url: "https://via.placeholder.com/100x100.png?text=Logo+6",
       time_start: "08:00",
@@ -92,7 +92,7 @@ export const collectionData = [
       id: "networking-006",
       color: "#b3fff6", // Light Cyan
       price: 800, // $8.00
-      stripePriceId: "price_REPLACE_WITH_REAL_ID_6",
+      stripePriceId: "price_1RiwhbK6xLgk1t9fx1hRk5WE",
     },
     page_item_url: "event/networking-breakfast",
   },

@@ -7,18 +7,27 @@ exports.handler = async (event) => {
     if (event.httpMethod !== "POST") {
       return { statusCode: 405, body: "Method Not Allowed" };
     }
-
-    const { priceId, eventName } = JSON.parse(event.body);
+    const { priceId, collection, eventName } = JSON.parse(event.body);
 
     const session = await stripe.checkout.sessions.create({
-      line_items: [{ price: priceId, quantity: 1, eventName: eventName }],
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
       mode: "payment",
-      success_url: "https://YOUR_SITE.netlify.app/success", // Change to your real URL
-      cancel_url: "https://YOUR_SITE.netlify.app/cancel", // Change to your real URL
+      success_url: "https://YOUR_SITE.netlify.app/success",
+      cancel_url: "https://YOUR_SITE.netlify.app/cancel",
+      metadata: {
+        collection: collection || "",
+        eventName: eventName || "",
+      },
     });
+
     return {
       statusCode: 200,
-      body: JSON.stringify({ id: session.id }),
+      body: JSON.stringify({ url: session.url }),
     };
   } catch (err) {
     console.error("Stripe error:", err);
