@@ -14,7 +14,7 @@ import { initEventModal } from "./components/modal.js";
 import { initViewToggle } from "./components/viewToggle.js";
 import { initBookTicket } from "./components/bookEvent.js";
 
-export function initializeApp() {
+function initializeApp() {
   // Global variable to store grouped events
   let groupedEvents;
 
@@ -36,3 +36,5 @@ export function initializeApp() {
   initBookTicket();
   initEventModal(); // Only call once after modal is loaded
 }
+
+initializeApp();

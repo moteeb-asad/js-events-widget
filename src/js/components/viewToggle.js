@@ -24,7 +24,6 @@ export function initViewToggle() {
   });
 
   monthBtn.addEventListener("click", function () {
-    console.log("monthBtn clicked");
     toggleView(monthBtn, listBtn);
     monthNavigationContainer.style.display = "block";
     accordionContainer.style.display = "none";
