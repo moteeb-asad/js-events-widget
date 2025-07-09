@@ -27,10 +27,7 @@ function initBookTicket() {
 
       const eventTitle = e.target.closest(".book-ticket-btn").dataset.eventname;
       let priceId = e.target.closest(".book-ticket-btn").dataset.priceid;
-      console.log("priceId", priceId);
-      console.log("eventTitle", eventTitle);
       let collection = null;
-      console.log(window.groupedEvents);
       window.groupedEvents.forEach((events) => {
         events.forEach((event) => {
           if (event.data.name === eventTitle) {
@@ -48,7 +45,6 @@ function initBookTicket() {
       showPaymentModal();
       // Optionally, call handleBookClick() after payment is confirmed
       handleBookClick(priceId, { collection, eventName: eventTitle });
-      console.log("Book ticket for event:", eventTitle);
     }
   });
 
@@ -74,7 +70,7 @@ function initBookTicket() {
 }
 
 async function handleBookClick(priceId, metadata) {
-  const response = await fetch("/.netlify/functions/create-checkout-session", {
+  const response = await fetch("/netlify/functions/create-checkout-session", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ priceId, metadata }),

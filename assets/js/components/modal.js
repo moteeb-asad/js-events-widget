@@ -6,7 +6,6 @@ export function initEventModal(currentMonthName) {
   const modalContainer = document.querySelector(
     ".lx-agenda-event-modal-container"
   );
-  console.log("modalContainer", modalContainer);
   if (!modalContainer) return; // Exit if modal is not found
   const closeBtn = modalContainer.querySelector(".event-modal-close-btn");
   if (!closeBtn) {
