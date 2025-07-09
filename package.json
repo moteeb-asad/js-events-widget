@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "stripe": "^18.3.0"
+  }
+}
