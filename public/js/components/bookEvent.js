@@ -17,7 +17,9 @@ function initBookTicket() {
         events.forEach((event) => {
           if (event.data.name === eventTitle) {
             priceId = event.data.stripePriceId;
-            price = event.data.price;
+            price = event.data.price
+              ? (event.data.price / 100).toFixed(2)
+              : "0.00";
           }
         });
       });
