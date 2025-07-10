@@ -8,7 +8,7 @@ exports.handler = async (event) => {
     if (event.httpMethod !== "POST") {
       return { statusCode: 405, body: "Method Not Allowed" };
     }
-    const { priceId, collection, eventName } = JSON.parse(event.body);
+    const { priceId, collection, eventName, price } = JSON.parse(event.body);
 
     // Determine base URL from environment variables
     const isLocal =
@@ -30,7 +30,9 @@ exports.handler = async (event) => {
       mode: "payment",
       success_url: `${baseUrl}/success?eventName=${encodeURIComponent(
         eventName
-      )}&priceId=${encodeURIComponent(priceId)}`,
+      )}&priceId=${encodeURIComponent(priceId)}&price=${encodeURIComponent(
+        price
+      )}`,
 
       cancel_url: `${baseUrl}/cancel`,
       metadata: {
