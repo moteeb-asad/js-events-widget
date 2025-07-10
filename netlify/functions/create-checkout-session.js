@@ -4,6 +4,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 exports.handler = async (event) => {
   try {
     console.log("Incoming event body:", event.body);
+    console.log("STRIPE_SECRET_KEY present:", !!process.env.STRIPE_SECRET_KEY);
     if (event.httpMethod !== "POST") {
       return { statusCode: 405, body: "Method Not Allowed" };
     }
