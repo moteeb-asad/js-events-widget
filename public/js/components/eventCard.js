@@ -139,6 +139,10 @@ export function createEventCard(event) {
   bookTicketWrap.className = "book-ticket-btn-price-wrap";
 
   const bookTicketBtn = document.createElement("button");
+  const eventPrice = event.data.price
+    ? (event.data.price / 100).toFixed(2)
+    : "0.00";
+  bookTicketBtn.setAttribute("data-price", eventPrice);
   bookTicketBtn.setAttribute("data-priceid", event.data.stripePriceId);
   bookTicketBtn.setAttribute("data-eventname", event.data.name);
   bookTicketBtn.className = "book-ticket-btn";

@@ -45,7 +45,7 @@ body {
 .lx-agenda-wrap {
   font-family: "DM Sans", sans-serif !important;
   max-width: 1000px;
-  margin: auto;
+  margin: 30px auto 0;
   padding: 0 12px;
 }
 
@@ -913,25 +913,88 @@ body {
   }
 }
 
-/* ------------- Payment Modal -------------  */
+/* ------------- Payment Cancelled -------------  */
 
-.payment-modal-container {
-  background-color: rgb(0 0 0 / 0.8);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: none;
+.payment-cancelled-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  height: 100%;
+}
+.payment-cancelled-container .payment-cancelled-title {
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  line-height: 2rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0px;
+  color: #09090b !important;
+}
+.payment-cancelled-container .payment-cancelled-description {
+  color: #71757a;
+  font-size: 16px;
+  margin: 2rem 0;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+.payment-cancelled-container .payment-cancelled-button {
+  color: #71757a;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px !important;
+  text-decoration: none;
+  padding: 0 1.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.payment-cancelled-container .payment-cancelled-button:hover {
+  text-decoration: underline !important;
 }
 
-.payment-modal-wrap {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
+/* ------------- Payment Success -------------  */
+
+.payment-success-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.payment-success-container .payment-success-title {
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  line-height: 2rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0px;
+  color: #09090b !important;
+}
+.payment-success-container .payment-success-description {
+  color: #71757a;
+  font-size: 16px;
+  margin: 2rem 0;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+.payment-success-container .payment-success-button {
+  color: #71757a;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px !important;
+  text-decoration: none;
+  padding: 0 1.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.payment-success-container .payment-success-button:hover {
+  text-decoration: underline !important;
 }
 
 /* ------------- Book Ticket Button Styles -------------  */
@@ -968,6 +1031,23 @@ body {
   height: 16px;
 }
 
+.book-ticket-loader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #888;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Book Ticket Button in Event Cards */
 
 .book-ticket-btn-price-wrap {
@@ -999,6 +1079,28 @@ body {
 .book-ticket-btn svg {
   width: 14px;
   height: 14px;
+}
+
+/* ------------- Content Loader -------------  */
+
+.content-loader-wrap {
+  display: none;
+}
+
+.content-loader-wrap .content-loader {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #fff;
+  border-top: 3px solid #888;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ------------- Footer -------------  */

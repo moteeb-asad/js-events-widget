@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="payment-success-container">
+      <h1 class="payment-success-title">Payment Successful!</h1>
+      <p class="payment-success-description">
+        Thank you for booking your event. Your payment was processed
+        successfully.
+      </p>
+      <div class="event-details" id="event-details">
+        <!-- Event details will be displayed here -->
+      </div>
+      <a href="/" class="payment-success-button">Go to Homepage</a>
+    </div>
+    <script>
+      // Example: Display event details from query params or localStorage
+      // (You can adjust this logic based on how you pass event info)
+      function getQueryParams() {
+        const params = {};
+        window.location.search.replace(
+          /[?&]+([^=&]+)=([^&]*)/gi,
+          function (m, key, value) {
+            params[decodeURIComponent(key)] = decodeURIComponent(value);
+          }
+        );
+        return params;
+      }
+      const params = getQueryParams();
+      const eventDetailsDiv = document.getElementById("event-details");
+      if (params.eventName) {
+        eventDetailsDiv.innerHTML = `
+          <h2>Event: ${params.eventName}</h2>
+          <p>Price: ${params.priceId || "N/A"}</p>
+        `;
+      } else {
+        eventDetailsDiv.innerHTML = "<p>No event details found.</p>";
+      }
+    </script>
+  </body>
+</html>
