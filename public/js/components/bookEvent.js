@@ -12,10 +12,12 @@ function initBookTicket() {
 
       const eventTitle = btn.dataset.eventname;
       let priceId = btn.dataset.priceid;
+      let price = btn.dataset.price;
       window.groupedEvents.forEach((events) => {
         events.forEach((event) => {
           if (event.data.name === eventTitle) {
             priceId = event.data.stripePriceId;
+            price = event.data.price;
           }
         });
       });
@@ -36,6 +38,7 @@ function initBookTicket() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               priceId,
+              price,
               eventName: eventTitle,
             }),
           }

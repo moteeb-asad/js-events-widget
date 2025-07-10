@@ -35,7 +35,7 @@
       if (params.eventName) {
         eventDetailsDiv.innerHTML = `
           <h2>Event: ${params.eventName}</h2>
-          <p>Price: ${params.priceId || "N/A"}</p>
+          <p>Price: $${params.price || "N/A"}</p>
         `;
       } else {
         eventDetailsDiv.innerHTML = "<p>No event details found.</p>";
