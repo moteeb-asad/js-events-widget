@@ -80,6 +80,13 @@ export function initEventModal(currentMonthName) {
       : "0.00";
     priceLabel.textContent = `$${price}`;
 
+    const bookTicketBtn = modalContainer.querySelector(
+      ".modal-book-ticket-btn"
+    );
+    bookTicketBtn.setAttribute("data-price", price);
+    bookTicketBtn.setAttribute("data-priceid", event.data.stripePriceId);
+    bookTicketBtn.setAttribute("data-eventname", event.data.name);
+
     // Show modal
     modalContainer.style.display = "flex";
   }

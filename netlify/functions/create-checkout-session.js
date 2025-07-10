@@ -9,6 +9,16 @@ exports.handler = async (event) => {
     }
     const { priceId, collection, eventName } = JSON.parse(event.body);
 
+    // Determine base URL from environment variables
+    const isLocal =
+      process.env.NETLIFY_DEV === "true" ||
+      process.env.NODE_ENV === "development";
+    const localBaseUrl = process.env.LOCAL_BASE_URL || "http://localhost:8888";
+    const prodBaseUrl =
+      process.env.PROD_BASE_URL ||
+      "https://javascript-events-widget.netlify.app";
+    const baseUrl = isLocal ? localBaseUrl : prodBaseUrl;
+
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
@@ -17,8 +27,11 @@ exports.handler = async (event) => {
         },
       ],
       mode: "payment",
-      success_url: "https://YOUR_SITE.netlify.app/success",
-      cancel_url: "https://YOUR_SITE.netlify.app/cancel",
+      success_url: `${baseUrl}/success?eventName=${encodeURIComponent(
+        eventName
+      )}&priceId=${encodeURIComponent(priceId)}`,
+
+      cancel_url: `${baseUrl}/cancel`,
       metadata: {
         collection: collection || "",
         eventName: eventName || "",

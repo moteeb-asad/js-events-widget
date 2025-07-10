@@ -5,8 +5,13 @@ function initBookTicket() {
     if (e.target.closest(".book-ticket-btn")) {
       e.stopPropagation();
 
-      const eventTitle = e.target.closest(".book-ticket-btn").dataset.eventname;
-      let priceId = e.target.closest(".book-ticket-btn").dataset.priceid;
+      const btn = e.target.closest(".book-ticket-btn");
+      const originalContent = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loader"></span> Processing...';
+
+      const eventTitle = btn.dataset.eventname;
+      let priceId = btn.dataset.priceid;
       window.groupedEvents.forEach((events) => {
         events.forEach((event) => {
           if (event.data.name === eventTitle) {
@@ -16,6 +21,8 @@ function initBookTicket() {
       });
 
       if (!priceId) {
+        btn.disabled = false;
+        btn.innerHTML = originalContent;
         alert("Stripe Price ID not found for this event.");
         return;
       }
@@ -37,9 +44,13 @@ function initBookTicket() {
         if (data.url) {
           window.location.href = data.url; // Redirect to Stripe Checkout
         } else {
+          btn.disabled = false;
+          btn.innerHTML = originalContent;
           alert("Failed to create Stripe Checkout session.");
         }
       } catch (error) {
+        btn.disabled = false;
+        btn.innerHTML = originalContent;
         alert("Error connecting to payment service.");
       }
     }

@@ -1,20 +1,21 @@
-import { collectionData } from "./dummyData.js";
-import { groupEventsByMonth } from "./components/dataProcessor.js";
-import { generateEventAccordion } from "./components/accordion.js";
 import {
+  collectionData,
+  groupEventsByMonth,
+  generateEventAccordion,
   appendDropdownCategories,
   initFilterDropdown,
   initFilterEventListeners,
-} from "./components/filters.js";
-import {
   generateEventsMonth,
   initMonthNavigation,
-} from "./components/calendar.js";
-import { initEventModal } from "./components/modal.js";
-import { initViewToggle } from "./components/viewToggle.js";
-import { initBookTicket } from "./components/bookEvent.js";
+  initEventModal,
+  initViewToggle,
+  initBookTicket,
+  showLoader,
+  hideLoader,
+} from "./imports.js";
 
 function initializeApp() {
+  showLoader();
   // Global variable to store grouped events
   let groupedEvents;
 
@@ -38,3 +39,4 @@ function initializeApp() {
 }
 
 initializeApp();
+hideLoader();
