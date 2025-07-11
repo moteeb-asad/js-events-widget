@@ -1,7 +1,5 @@
 # JS Events Widget
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9e8e3b7e-xxxx-xxxx-xxxx-xxxxxxxxxxxx/deploy-status)](https://app.netlify.com/sites/javascript-events-widget/deploys)
-
 A modern, modular, and responsive events widget for web projects. Easily display, filter, and explore upcoming events with a beautiful UI, smooth interactions, and integrated Stripe payments.
 
 **Live Demo:** [javascript-events-widget.netlify.app](https://javascript-events-widget.netlify.app/)
@@ -95,7 +93,7 @@ js-events-widget/
   - Go to your site on Netlify > Site settings > Environment variables.
   - Add a new variable:
     - Key: `STRIPE_SECRET_KEY`
-    - Value: _your Stripe secret key (starts with `sk_`)_
+    - Value: _your Stripe secret key (starts with `sk_`)\_
   - Make sure to redeploy your site after adding or updating environment variables.
 - The function will not work unless this variable is set. You will see errors like `Neither apiKey nor config.authenticator provided` if it is missing.
 - You can also set other environment variables for local and production base URLs if needed:
