@@ -1,5 +1,24 @@
 # JS Events Widget
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9e8e3b7e-xxxx-xxxx-xxxx-xxxxxxxxxxxx/deploy-status)](https://app.netlify.com/sites/javascript-events-widget/deploys)
+
+A modern, modular, and responsive events widget for web projects. Easily display, filter, and explore upcoming events with a beautiful UI, smooth interactions, and integrated Stripe payments.
+
+**Live Demo:** [javascript-events-widget.netlify.app](https://javascript-events-widget.netlify.app/)
+
+---
+
+## Features
+
+- List and calendar views for events
+- Category filtering
+- Responsive design
+- Stripe Checkout integration for ticket booking
+- Modular vanilla JS components
+- Easy to customize and extend
+
+---
+
 ## Project Structure
 
 ```
